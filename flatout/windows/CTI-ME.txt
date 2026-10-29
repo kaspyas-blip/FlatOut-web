@@ -1,0 +1,27 @@
+FlatOut Web - FlatOut (2004) v prohlizeci
+=========================================
+
+Co to je: originalni FlatOut.exe prelozeny do WebAssembly. Grafika bezi pres WebGPU,
+zvuk pres Web Audio, LAN hra pres virtualni LAN tohoto serveru. Herni data se ctou
+z tve slozky FlatOut (o uroven vys), nic ze hry v balicku neni.
+
+Spusteni
+  1. Nainstaluj Node.js (LTS) z https://nodejs.org (jednou).
+  2. Dvakrat klikni na start.bat. Otevre se http://localhost:8080/ (pouzij Google Chrome).
+  3. Klikni na Play. Ovladani: sipky, Enter = potvrdit, Esc = zpet.
+  Okno se serverem nech otevrene, dokud hrajes.
+
+Ukladani: savy jsou v prohlizeci (Saves > Download backup pro zalohu).
+
+Multiplayer (LAN, zatim experimentalni)
+  Vsichni hraci musi mit stranku otevrenou ze STEJNEHO serveru: pak se vidi v herni LAN.
+  - Na jednom PC: otevri dve okna Chromu na http://localhost:8080/ (test).
+  - Kamaradi: prohlizec povoli WebGPU a sdilenou pamet jen na https:// nebo localhost,
+    takze pro ostatni je potreba HTTPS tunel (napr. Cloudflare Tunnel: cloudflared tunnel
+    --url http://localhost:8080) a oni otevrou adresu https://... kterou tunel vypise.
+    Herni data jim posila tvuj server: hraj jen s kamarady, kteri FlatOut sami vlastni,
+    a adresu serveru nezverejnuj.
+
+Zname omezeni
+  - Uvodni videa se nehraji (cerna obrazovka na zacatku, Enter preskoci).
+  - Nejde o oficialni produkt; Bugbear/THQ Nordic s tim nemaji nic spolecneho.

@@ -1,0 +1,14 @@
+work/
+deps/*
+!deps/.gitkeep
+gen/all
+web/dist/
+node_modules/
+__pycache__/
+*.o
+*.wasm
+*.wasm.gz
+FlatOutWeb/
+# game files never go into this repository
+*.bfs
+FlatOut.exe
